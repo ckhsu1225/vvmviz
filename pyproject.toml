@@ -1,0 +1,39 @@
+[project]
+name = "vvmviz"
+version = "0.1.0"
+description = "Interactive visualization tool for VVM (Vector Vorticity Model) simulation data"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    # Core data processing
+    "vvm-reader @ git+https://github.com/ckhsu1225/vvm_reader.git",
+
+    # Visualization
+    "panel>=1.5.0",
+    "holoviews>=1.19.0",
+    "hvplot>=0.11.0",
+    "bokeh>=3.5.0",
+    "datashader>=0.16.0",
+
+    # Data manipulation
+    "xarray>=2025.10.1",
+    "numpy>=2.0.0",
+    "dask>=2025.10.0",
+
+    # Plotting and colormaps
+    "matplotlib>=3.10.0",
+    "cmaps>=1.0.0",
+
+    # Geospatial
+    "pyshp>=2.3.0",  # shapefile reading
+
+    # File I/O
+    "netcdf4>=1.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.7.0",
+]
