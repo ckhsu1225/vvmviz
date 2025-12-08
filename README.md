@@ -33,6 +33,7 @@ cd vvmviz
 uv venv
 source .venv/bin/activate
 uv sync
+uv pip install -e .  # Install vvmviz package
 ```
 
 ## Quick Start
