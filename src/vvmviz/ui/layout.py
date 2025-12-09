@@ -80,7 +80,7 @@ def create_sidebar(
         widgets['var_selectors']['category'],
         widgets['var_selectors']['variable'],
         widgets['buttons']['load'],
-        title="📁 Data Selection",
+        title="Data Selection",
         collapsed=False,
         sizing_mode='stretch_width'
     )
@@ -97,7 +97,7 @@ def create_sidebar(
         pn.layout.Divider(),
         pn.pane.Markdown("### Domain Map Selector"),
         domain_map_selector.get_panel(),
-        title="📏 Data Range",
+        title="Data Range",
         collapsed=True,
         sizing_mode='stretch_width'
     )
@@ -120,7 +120,7 @@ def create_sidebar(
         widgets['cmap_reverse'],
         pn.layout.Divider(),
         clim_row,
-        title="🎨 Color Settings",
+        title="Color Settings",
         collapsed=True,
         sizing_mode='stretch_width'
     )
@@ -166,7 +166,7 @@ def create_sidebar(
         pn.layout.Divider(),
         pn.pane.Markdown("#### Contour Overlay"),
         col_contour,
-        title="🗺️ Layer Overlays",
+        title="Layer Overlays",
         collapsed=True,
         sizing_mode='stretch_width'
     )
@@ -174,14 +174,14 @@ def create_sidebar(
     # 5. Variable Information Card
     card_variable_info = pn.Card(
         metadata_pane,
-        title="ℹ️ Variable Information",
+        title="Variable Information",
         collapsed=True,
         sizing_mode='stretch_width'
     )
 
     # Assemble sidebar
     sidebar = pn.Column(
-        pn.pane.Markdown("### ⚙️ Controls"),
+        pn.pane.Markdown("### Controls"),
         card_data_selection,
         card_overlays,
         card_plot_settings,
